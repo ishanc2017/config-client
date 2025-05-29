@@ -18,6 +18,7 @@ public class ConfigClientController {
 	@GetMapping("/company")
 	//@RequestMapping(path = "/company", method = RequestMethod.GET)
 	public String getCompanyName() {
+		System.out.println("Fetching company name: " + companyName);
 		return companyName;
 	}
 	
