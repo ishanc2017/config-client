@@ -9,22 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientController {
 
-	@Value("${company}")
+	@Value("${companyName}")
 	private String companyName;
 	
-	@Value("${name}")
-	private String myName;
+	@Value("${employeeName}")
+	private String employeeName;
 	
 	@GetMapping("/company")
-	//@RequestMapping(path = "/company", method = RequestMethod.GET)
 	public String getCompanyName() {
-		System.out.println("Fetching company name: " + companyName);
 		return companyName;
 	}
 	
-	@GetMapping("/myname")
-	public String getMyName() {
-		return myName;
+	@GetMapping("/name")
+	public String getEmployeeName() {
+		return employeeName;
 	}
 	
 }
